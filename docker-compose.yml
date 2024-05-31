@@ -2,7 +2,7 @@ services:
   bot_1:
     container_name: chrp_1
     build:
-      context: https://github.com/2infinity-gh/hb.git
+      context: https://2infinity-gh@github.com/2infinity-gh/hb.git#master
     volumes:
       - ./credentials/master_account:/home/hummingbot/conf
       - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
@@ -24,7 +24,7 @@ services:
   bot_2:
     container_name: chrp_2
     build:
-      context: https://github.com/2infinity-gh/hb.git
+      context: https://2infinity-gh@github.com/2infinity-gh/hb.git#master
     volumes:
       - ./credentials/master_account:/home/hummingbot/conf
       - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
@@ -46,7 +46,7 @@ services:
   bot_3:
     container_name: chrp_3
     build:
-      context: https://github.com/2infinity-gh/hb.git
+      context: https://2infinity-gh@github.com/2infinity-gh/hb.git#master
     volumes:
       - ./credentials/master_account:/home/hummingbot/conf
       - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
