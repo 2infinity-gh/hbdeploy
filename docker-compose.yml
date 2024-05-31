@@ -26,8 +26,8 @@ services:
     build:
       context: https://github.com/2infinity-gh/hb.git#master
     volumes:
-      - ./credentials/cmaster_account:/home/hummingbot/conf
-      - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
+      - ./credentials/chrp_2:/home/hummingbot/conf
+      - ./credentials/chrp_2/connectors:/home/hummingbot/conf/connectors
       - ./instances/chrp_2/logs:/home/hummingbot/logs
       - ./instances/chrp_2/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
@@ -48,8 +48,8 @@ services:
     build:
       context: https://github.com/2infinity-gh/hb.git#master
     volumes:    
-      - ./credentials/master_account:/home/hummingbot/conf
-      - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
+      - ./credentials/chrp_3:/home/hummingbot/conf
+      - ./credentials/chrp_3/connectors:/home/hummingbot/conf/connectors
       - ./instances/chrp_3/logs:/home/hummingbot/logs
       - ./instances/chrp_3/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
