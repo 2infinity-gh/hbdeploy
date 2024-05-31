@@ -4,12 +4,12 @@ services:
     build:
       context: https://github.com/2infinity-gh/hb.git#master
     volumes:
-      - ./credentials/master_account:/home/hummingbot/conf
-      - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
-      - ./instances/chrp_1/logs:/home/hummingbot/logs
-      - ./instances/chrp_1/data:/home/hummingbot/data
-      - ./conf/scripts:/home/hummingbot/conf/scripts
-      - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./credentials/chrp_1:/home/phumming/hummingbot/conf
+      - ./credentials/chrp_1/connectors:/home/phumming/hummingbot/conf/connectors
+      - ./instances/chrp_1/logs:/home/phumming/hummingbot/logs
+      - ./instances/chrp_1/data:/home/phumming/hummingbot/data
+      - ./conf/scripts:/home/phumming/hummingbot/conf/scripts
+      - ./conf/controllers:/home/phumming/hummingbot/conf/controllers
     environment:
       - CONFIG_PASSWORD=a
 #      - CONFIG_FILE_NAME=v2_generic_with_controllers.py
@@ -26,12 +26,12 @@ services:
     build:
       context: https://github.com/2infinity-gh/hb.git#master
     volumes:
-      - ./credentials/master_account:/home/hummingbot/conf
-      - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
-      - ./instances/chrp_2/logs:/home/hummingbot/logs
-      - ./instances/chrp_2/data:/home/hummingbot/data
-      - ./conf/scripts:/home/hummingbot/conf/scripts
-      - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./credentials/chrp_2:/home/phumming/hummingbot/conf
+      - ./credentials/chrp_2/connectors:/home/phumming/hummingbot/conf/connectors
+      - ./instances/chrp_2/logs:/home/phumming/hummingbot/logs
+      - ./instances/chrp_2/data:/home/phumming/hummingbot/data
+      - ./conf/scripts:/home/phumming/hummingbot/conf/scripts
+      - ./conf/controllers:/home/phumming/hummingbot/conf/controllers
     environment:
       - CONFIG_PASSWORD=a
 #      - CONFIG_FILE_NAME=v2_generic_with_controllers.py
@@ -48,11 +48,11 @@ services:
     build:
       context: https://github.com/2infinity-gh/hb.git#master
     volumes:    
-      - ./credentials/master_account:/home/hummingbot/conf
-      - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
-      - ./instances/chrp_3/logs:/home/hummingbot/logs
-      - ./instances/chrp_3/data:/home/hummingbot/data
-      - ./conf/scripts:/home/hummingbot/conf/scripts
+      - ./credentials/chrp_3:/home/phumming/hummingbot/conf
+      - ./credentials/chrp_3/connectors:/home/phumming/hummingbot/conf/connectors
+      - ./instances/chrp_3/logs:/home/phumming/hummingbot/logs
+      - ./instances/chrp_3/data:/home/phumming/hummingbot/data
+      - ./conf/scripts:/home/phumming/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
     environment:
       - CONFIG_PASSWORD=a
