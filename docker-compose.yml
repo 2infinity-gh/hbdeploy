@@ -4,6 +4,7 @@ services:
     build:
       context: https://2infinity-gh@github.com/2infinity-gh/hb.git#master
     volumes:
+      - '~/.ssh/id_rsa'
       - ./credentials/master_account:/home/hummingbot/conf
       - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
       - ./instances/chrp_1/logs:/home/hummingbot/logs
@@ -26,6 +27,7 @@ services:
     build:
       context: https://2infinity-gh@github.com/2infinity-gh/hb.git#master
     volumes:
+      - '~/.ssh/id_rsa'
       - ./credentials/master_account:/home/hummingbot/conf
       - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
       - ./instances/chrp_2/logs:/home/hummingbot/logs
@@ -48,6 +50,7 @@ services:
     build:
       context: https://2infinity-gh@github.com/2infinity-gh/hb.git#master
     volumes:
+      - '~/.ssh/id_rsa'    
       - ./credentials/master_account:/home/hummingbot/conf
       - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
       - ./instances/chrp_3/logs:/home/hummingbot/logs
