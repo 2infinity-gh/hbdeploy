@@ -1,19 +1,18 @@
 services:
   bot_1:
-    container_name: chrp_1
-    build:
-      context: https://github.com/2infinity-gh/hb.git#master
+    container_name: master_account
+    image: kryptosquid/hummingbot:latest
     volumes:
       - ./credentials/master_account:/home/hummingbot/conf
       - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
-      - ./instances/chrp_1/logs:/home/hummingbot/logs
-      - ./instances/chrp_1/data:/home/hummingbot/data
+      - ./instances/master_account/logs:/home/hummingbot/logs
+      - ./instances/master_account/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
     environment:
       - CONFIG_PASSWORD=a
-#      - CONFIG_FILE_NAME=v2_generic_with_controllers.py
-#      - SCRIPT_CONFIG=conf_v2_generic_with_controllers_1.yml
+      - CONFIG_FILE_NAME=simple_pmm.py
+      - SCRIPT_CONFIG=conf_simple_pmm_vol_4_seller.yml
     logging:
       driver: "json-file"
       options:
@@ -23,13 +22,33 @@ services:
     stdin_open: true
   bot_2:
     container_name: chrp_2
-    build:
-      context: https://github.com/2infinity-gh/hb.git#master
+    image: kryptosquid/hummingbot:latest
     volumes:
       - ./credentials/chrp_2:/home/hummingbot/conf
       - ./credentials/chrp_2/connectors:/home/hummingbot/conf/connectors
       - ./instances/chrp_2/logs:/home/hummingbot/logs
       - ./instances/chrp_2/data:/home/hummingbot/data
+      - ./conf/scripts:/home/hummingbot/conf/scripts
+      - ./conf/controllers:/home/hummingbot/conf/controllers
+    environment:
+      - CONFIG_PASSWORD=a
+      - CONFIG_FILE_NAME=simple_pmm.py
+      - SCRIPT_CONFIG=conf_simple_pmm_vol_4_buyer.yml
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "10m"
+          max-file: 5
+    tty: true
+    stdin_open: true
+  bot_3:
+    container_name: chrp_3
+    image: kryptosquid/hummingbot:latest
+    volumes:    
+      - ./credentials/chrp_3:/home/hummingbot/conf
+      - ./credentials/chrp_3/connectors:/home/hummingbot/conf/connectors
+      - ./instances/chrp_3/logs:/home/hummingbot/logs
+      - ./instances/chrp_3/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
     environment:
@@ -43,15 +62,14 @@ services:
           max-file: 5
     tty: true
     stdin_open: true
-  bot_3:
-    container_name: chrp_3
-    build:
-      context: https://github.com/2infinity-gh/hb.git#master
+  bot_4:
+    container_name: chrp_4
+    image: kryptosquid/hummingbot:latest
     volumes:    
-      - ./credentials/chrp_3:/home/hummingbot/conf
-      - ./credentials/chrp_3/connectors:/home/hummingbot/conf/connectors
-      - ./instances/chrp_3/logs:/home/hummingbot/logs
-      - ./instances/chrp_3/data:/home/hummingbot/data
+      - ./credentials/chrp_4:/home/hummingbot/conf
+      - ./credentials/chrp_4/connectors:/home/hummingbot/conf/connectors
+      - ./instances/chrp_4/logs:/home/hummingbot/logs
+      - ./instances/chrp_4/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
     environment:
