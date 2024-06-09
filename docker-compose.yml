@@ -1,6 +1,7 @@
 services:
   bot_1:
     container_name: master_account
+    restart: always
     image: kryptosquid/hummingbot:latest
     volumes:
       - ./credentials/master_account:/home/hummingbot/conf
@@ -22,6 +23,7 @@ services:
     stdin_open: true
   bot_2:
     container_name: chrp_2
+    restart: always
     image: kryptosquid/hummingbot:latest
     volumes:
       - ./credentials/chrp_2:/home/hummingbot/conf
@@ -43,6 +45,7 @@ services:
     stdin_open: true
   bot_3:
     container_name: chrp_3
+    restart: always
     image: kryptosquid/hummingbot:latest
     volumes:    
       - ./credentials/chrp_3:/home/hummingbot/conf
@@ -64,6 +67,7 @@ services:
     stdin_open: true
   bot_4:
     container_name: chrp_4
+    restart: always
     image: kryptosquid/hummingbot:latest
     volumes:    
       - ./credentials/chrp_4:/home/hummingbot/conf
