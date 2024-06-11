@@ -10,6 +10,7 @@ services:
       - ./instances/master_account/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies        
     environment:
       - CONFIG_PASSWORD=a
       - CONFIG_FILE_NAME=simple_pmm.py
@@ -32,6 +33,7 @@ services:
       - ./instances/chrp_2/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies        
     environment:
       - CONFIG_PASSWORD=a
       - CONFIG_FILE_NAME=simple_pmm.py
@@ -53,6 +55,7 @@ services:
       - ./instances/chrp_3/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies      
     environment:
       - CONFIG_PASSWORD=a
 #      - CONFIG_FILE_NAME=v2_generic_with_controllers.py
