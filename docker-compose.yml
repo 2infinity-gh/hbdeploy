@@ -13,8 +13,8 @@ services:
       - ./conf/strategies:/home/hummingbot/conf/strategies        
     environment:
       - CONFIG_PASSWORD=a
-      - CONFIG_FILE_NAME=simple_pmm.py
-      - SCRIPT_CONFIG=conf_simple_pmm_vol_4_seller.yml
+#      - CONFIG_FILE_NAME=simple_pmm.py
+#      - SCRIPT_CONFIG=conf_simple_pmm_vol_4_seller.yml
     logging:
       driver: "json-file"
       options:
@@ -36,8 +36,8 @@ services:
       - ./conf/strategies:/home/hummingbot/conf/strategies        
     environment:
       - CONFIG_PASSWORD=a
-      - CONFIG_FILE_NAME=simple_pmm.py
-      - SCRIPT_CONFIG=conf_simple_pmm_vol_4_buyer.yml
+#     - CONFIG_FILE_NAME=simple_pmm.py
+#     - SCRIPT_CONFIG=conf_simple_pmm_vol_4_buyer.yml
     logging:
       driver: "json-file"
       options:
