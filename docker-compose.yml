@@ -89,4 +89,15 @@ services:
           max-file: 5 
     tty: true
     stdin_open: true
-
+  gateway:
+    container_name: "gateway"
+    image: kryptosquid/gateway:latest    
+    ports:
+      - "15888:15888"
+      - "8080:8080"
+    volumes:
+      - "./gateway_files/conf:/usr/src/app/conf"
+      - "./gateway_files/logs:/usr/src/app/logs"
+      - "./hummingbot_files/certs:/home/gateway/certs"
+    environment:
+      - GATEWAY_PASSPHRASE=aliens foil concur pampered
