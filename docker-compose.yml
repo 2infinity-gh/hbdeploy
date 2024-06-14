@@ -47,6 +47,7 @@ services:
     stdin_open: true
   bot_3:
     container_name: chrp_3
+    restart: always    
     image: kryptosquid/hummingbot:latest
     volumes:    
       - ./credentials/chrp_3:/home/hummingbot/conf
@@ -90,6 +91,7 @@ services:
           max-file: 5 
     tty: true
     stdin_open: true
+    network_mode: host
   gateway:
     container_name: "gateway"
     image: kryptosquid/gateway:latest    
@@ -97,8 +99,9 @@ services:
       - "15888:15888"
       - "8080:8080"
     volumes:
-      - "./gateway_files/conf:/usr/src/app/conf"
-      - "./gateway_files/logs:/usr/src/app/logs"
+      - "./gateway_files/conf:/home/gateway/conf"
+      - "./gateway_files/logs:/home/gateway/logs"
+      - "./gateway_files/db:/home/gateway/db"
       - "./certs:/home/gateway/certs"
     environment:
-      - GATEWAY_PASSPHRASE=aliens foil concur pampered
+      - GATEWAY_PASSPHRASE=N3d3rW13t
